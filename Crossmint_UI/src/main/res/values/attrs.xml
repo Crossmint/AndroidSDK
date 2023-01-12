@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="nftGrid" format="reference"/>
+    <attr name="itemNFTGridCard" format="reference"/>
+    <attr name="itemNFTGridImage" format="reference"/>
+    <attr name="itemNFTGridTitle" format="reference"/>
+    <attr name="itemNFTGridDescription" format="reference"/>
+    <attr name="itemNFTGridDetailLayout" format="reference"/>
+    <attr name="nftDetail" format="reference"/>
+    <attr name="itemNFTDetailImage" format="reference"/>
+    <attr name="itemNFTDetailTitle" format="reference"/>
+    <attr name="itemNFTDetailBrand" format="reference"/>
+    <attr name="itemNFTDetailDescription" format="reference"/>
+</resources>
