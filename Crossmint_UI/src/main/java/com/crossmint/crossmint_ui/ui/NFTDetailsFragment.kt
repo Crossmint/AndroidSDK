@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.crossmint.crossmint_ui.R
-import com.crossmint.mobile.models.NFT
+import com.crossmint.crossmint_ui.models.NFT
 import coil.load
+import com.crossmint.crossmint_ui.R
 import com.crossmint.crossmint_ui.databinding.FragmentNftDetailsBinding
 
 class NFTDetailsFragment : Fragment() {
@@ -42,8 +42,8 @@ class NFTDetailsFragment : Fragment() {
         super.onResume()
         binding.apply {
             image.load(nft.metadata.image) {
-//                error(R.drawable.ic_launcher_background)
-//                placeholder(R.drawable.ic_launcher_background)
+                error(R.drawable.ic_launcher_background)
+                placeholder(R.drawable.ic_launcher_background)
             }
             title.text = nft.metadata.name
             brand.text = nft.chain
