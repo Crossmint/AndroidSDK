@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.crossmint.crossmint_ui.models.NFT
-import com.crossmint.crossmint_ui.ui.NFTGridFragment
+import com.crossmint.android.models.NFT
+import com.crossmint.android.ui.NFTGridFragment
 
 class WalletFragment : Fragment() {
     private var nfts: List<NFT> = listOf()

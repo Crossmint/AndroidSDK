@@ -1,4 +1,4 @@
-package com.crossmint.crossmint_ui.ui
+package com.crossmint.android.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.crossmint.crossmint_ui.databinding.FragmentNftGridBinding
-import com.crossmint.crossmint_ui.models.NFT
-import com.crossmint.crossmint_ui.utils.setColumns
+import com.crossmint.android.models.NFT
+import com.crossmint.android.utils.setColumns
 import java.io.Serializable
 
 class NFTGridFragment: Fragment() {
@@ -19,7 +19,7 @@ class NFTGridFragment: Fragment() {
     private var collectionFragmentAdapter: CollectionFragmentAdapter = CollectionFragmentAdapter()
 
     companion object {
-        fun newInstance(nfts: List<NFT>, numberOfColumns: Int = 2): NFTGridFragment{
+        fun newInstance(nfts: List<NFT>, numberOfColumns: Int = 2): NFTGridFragment {
             val fragment = NFTGridFragment()
             fragment.arguments = buildBundle(nfts, numberOfColumns)
             return fragment

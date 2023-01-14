@@ -1,4 +1,4 @@
-package com.crossmint.crossmint_ui
+package com.crossmint.android
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

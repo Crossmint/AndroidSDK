@@ -1,4 +1,4 @@
-package com.crossmint.crossmint_ui.ui
+package com.crossmint.android.ui
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.crossmint.crossmint_ui.R
 import com.crossmint.crossmint_ui.databinding.ItemCollectionsBinding
-import com.crossmint.crossmint_ui.models.NFT
+import com.crossmint.android.models.NFT
 
 
 class CollectionFragmentAdapter : RecyclerView.Adapter<CollectionFragmentAdapter.ViewHolder>() {

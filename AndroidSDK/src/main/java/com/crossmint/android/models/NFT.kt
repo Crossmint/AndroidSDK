@@ -1,4 +1,4 @@
-package com.crossmint.crossmint_ui.models
+package com.crossmint.android.models
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

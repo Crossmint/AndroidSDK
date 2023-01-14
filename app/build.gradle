@@ -47,6 +47,7 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:4.10.0"
 
     implementation project(path: ':AndroidSDK')
+//    implementation "io.github.crossmint:AndroidSDK:0.0.3"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

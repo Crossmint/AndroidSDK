@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.navigation.fragment.navArgs
-import com.crossmint.crossmint_ui.models.NFT
-import com.crossmint.crossmint_ui.ui.NFTDetailsFragment
+import com.crossmint.android.models.NFT
+import com.crossmint.android.ui.NFTDetailsFragment
 
 class NFTFragment : Fragment() {
     private lateinit var nft: NFT

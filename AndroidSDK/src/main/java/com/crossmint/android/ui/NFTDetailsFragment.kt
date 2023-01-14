@@ -1,4 +1,4 @@
-package com.crossmint.crossmint_ui.ui
+package com.crossmint.android.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import coil.load
 import com.crossmint.crossmint_ui.R
 import com.crossmint.crossmint_ui.databinding.FragmentNftDetailsBinding
-import com.crossmint.crossmint_ui.models.NFT
+import com.crossmint.android.models.NFT
 
 class NFTDetailsFragment : Fragment() {
     private lateinit var nft: NFT

@@ -1,4 +1,4 @@
-package com.crossmint.crossmint_ui.utils
+package com.crossmint.android.utils
 
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView

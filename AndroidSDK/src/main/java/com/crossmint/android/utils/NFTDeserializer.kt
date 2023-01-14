@@ -1,8 +1,8 @@
-package com.crossmint.crossmint_ui.utils
+package com.crossmint.android.utils
 
-import com.crossmint.crossmint_ui.models.EVMNFT
-import com.crossmint.crossmint_ui.models.NFT
-import com.crossmint.crossmint_ui.models.SolanaNFT
+import com.crossmint.android.models.EVMNFT
+import com.crossmint.android.models.NFT
+import com.crossmint.android.models.SolanaNFT
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement

@@ -1,4 +1,4 @@
-package com.crossmint.crossmint_ui
+package com.crossmint.android
 
 import org.junit.Test
 

@@ -1,8 +1,8 @@
 package com.crossmint.crossmintuidemo
 
 import android.net.Uri
-import com.crossmint.crossmint_ui.models.NFT
-import com.crossmint.crossmint_ui.utils.NFTDeserializer
+import com.crossmint.android.models.NFT
+import com.crossmint.android.utils.NFTDeserializer
 import com.google.gson.GsonBuilder
 import okhttp3.*
 import java.io.IOException

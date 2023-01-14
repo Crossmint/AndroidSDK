@@ -1,43 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@+id/homeFragment"
-
-    >
-
+>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.crossmint.crossmintuidemo.HomeFragment"
-        tools:layout="@layout/fragment_home">
+        tools:layout="@layout/fragment_home"
+    >
         <action
             android:id="@+id/action_homeFragment_to_walletFragment"
-            app:destination="@id/walletFragment" />
+            app:destination="@id/walletFragment"
+        />
     </fragment>
     <fragment
         android:id="@+id/walletFragment"
         android:name="com.crossmint.crossmintuidemo.WalletFragment"
         android:label="fragment_wallet"
-        tools:layout="@layout/fragment_wallet">
+        tools:layout="@layout/fragment_wallet"
+    >
         <argument
             android:name="nfts"
-            app:argType="com.crossmint.crossmint_ui.models.NFT[]" />
+            app:argType="com.crossmint.android.models.NFT[]"
+        />
         <argument
             android:name="numberOfColumns"
-            app:argType="integer" />
+            app:argType="integer"
+        />
         <action
             android:id="@+id/action_walletFragment_to_NFTFragment"
-            app:destination="@id/NFTFragment" />
+            app:destination="@id/NFTFragment"
+        />
     </fragment>
     <fragment
         android:id="@+id/NFTFragment"
         android:name="com.crossmint.crossmintuidemo.NFTFragment"
         android:label="fragment_nft"
-        tools:layout="@layout/fragment_nft">
+        tools:layout="@layout/fragment_nft"
+    >
         <argument
             android:name="nft"
-            app:argType="com.crossmint.crossmint_ui.models.NFT" />
+            app:argType="com.crossmint.android.models.NFT"
+        />
     </fragment>
-
 </navigation>
