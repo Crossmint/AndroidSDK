@@ -1,4 +1,4 @@
-# AndroidSDK
+# Crossmint Android SDK
 
 ## Installation
 
