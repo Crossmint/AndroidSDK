@@ -13,7 +13,7 @@ to the `dependencies` section of your `build.gradle` file, and you're good to go
 For exmple usage, clone this repository locally and check out the app provided. 
 Included in the demo is a real-world code example to fetch NFTs from an API and display their contents in-app.
 
-### `NFTDeserializer`
+#### `NFTDeserializer`
 
 The structure of an NFT takes different form depending on which blockchain the NFT is deployed on.
 In order to simplify working with APIs that provide NFTs in different forms, we've supplied a chain-agnostic `NFTDeserializer`.
