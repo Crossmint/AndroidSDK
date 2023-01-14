@@ -1,17 +1,12 @@
 package com.crossmint.crossmintuidemo
 
 import android.net.Uri
-import com.crossmint.crossmint_ui.models.EVMNFT
 import com.crossmint.crossmint_ui.models.NFT
-import com.crossmint.crossmint_ui.models.SolanaNFT
 import com.crossmint.crossmint_ui.utils.NFTDeserializer
-import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import java.net.URL
-import com.google.gson.reflect.TypeToken
-import com.google.gson.typeadapters.RuntimeTypeAdapterFactory
 import okhttp3.*
 import java.io.IOException
+import java.net.URL
 
 enum class Blockchain(val chain: String) {
     SOLANA("solana"),
@@ -37,12 +32,11 @@ class NFTService {
                     if (!response.isSuccessful) throw IOException("Unexpected code $response")
 
                     val json = response.body!!.string()
-                    println(json)
-
                     val gson = GsonBuilder().apply {
                         registerTypeAdapter(NFT::class.java, NFTDeserializer())
                     }.create()
-                    val nfts = gson.fromJson<Array<NFT>>(json, Array<NFT>::class.java)
+
+                    val nfts = gson.fromJson(json, Array<NFT>::class.java)
                     callback(nfts.toList())
                 }
             }
@@ -54,8 +48,8 @@ class NFTService {
             .appendQueryParameter("blockchain", blockchain.chain)
             .appendQueryParameter("address", address)
             .appendQueryParameter("devnet", devnet.toString())
-        val urlString = builder.build().toString()
 
+        val urlString = builder.build().toString()
         return URL(urlString)
     }
 }

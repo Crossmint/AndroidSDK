@@ -39,7 +39,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.0'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'com.google.code.gson:gson:2.10.1'
-    implementation "io.coil-kt:coil-compose:2.1.0"
+    implementation 'io.coil-kt:coil-compose:2.2.2'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
@@ -48,7 +48,7 @@ dependencies {
 
 ext {
     PUBLISH_GROUP_ID = 'io.github.crossmint'
-    PUBLISH_VERSION = '0.1'
-    PUBLISH_ARTIFACT_ID = 'Mobile-UI'
+    PUBLISH_VERSION = '0.0.2'
+    PUBLISH_ARTIFACT_ID = 'AndroidSDK'
 }
 apply from: 'publish-remote.gradle'

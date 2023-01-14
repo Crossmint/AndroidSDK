@@ -12,6 +12,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
 rootProject.name = "Crossmint UI Demo"
 include ':app'
-include ':Crossmint_UI'
+include ':AndroidSDK'

@@ -1,8 +1,7 @@
 package com.crossmint.crossmintuidemo
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ProgressBar
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.crossmint.crossmint_ui.models.NFT
 import coil.load
 import com.crossmint.crossmint_ui.R
 import com.crossmint.crossmint_ui.databinding.FragmentNftDetailsBinding
+import com.crossmint.crossmint_ui.models.NFT
 
 class NFTDetailsFragment : Fragment() {
     private lateinit var nft: NFT
