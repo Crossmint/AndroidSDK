@@ -48,7 +48,7 @@ dependencies {
 
 ext {
     PUBLISH_GROUP_ID = 'io.github.crossmint'
-    PUBLISH_VERSION = '0.0.2'
+    PUBLISH_VERSION = '0.0.3'
     PUBLISH_ARTIFACT_ID = 'AndroidSDK'
 }
 apply from: 'publish-remote.gradle'

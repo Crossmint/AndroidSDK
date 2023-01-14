@@ -22,13 +22,13 @@ interface MetadataType {
 
 @Parcelize
 sealed class NFT: NFTType, Serializable, Parcelable {
-    class Solana(val nft: SolanaNFT) : NFT() {
+    class Solana(private val nft: SolanaNFT) : NFT() {
         override val chain: Blockchain
             get() = nft.chain
         override val metadata: MetadataType
             get() = nft.metadata
     }
-    class EVM(val nft: EVMNFT) : NFT() {
+    class EVM(private val nft: EVMNFT) : NFT() {
         override val chain: Blockchain
             get() = nft.chain
         override val metadata: MetadataType
