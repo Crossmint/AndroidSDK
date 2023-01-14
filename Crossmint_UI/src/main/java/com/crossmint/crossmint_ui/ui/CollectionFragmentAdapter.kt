@@ -52,7 +52,7 @@ class CollectionFragmentAdapter : RecyclerView.Adapter<CollectionFragmentAdapter
                     placeholder(R.drawable.ic_launcher_background)
                 }
                 title.text = nft.metadata.name
-                desc.text = nft.metadata.sellerFeeBasisPoints.toString()
+                desc.text = nft.metadata.description
             }
             root.cardImage.setOnClickListener{ callback?.invoke(nft) }
         }

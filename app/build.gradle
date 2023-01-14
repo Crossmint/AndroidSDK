@@ -43,8 +43,9 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
-    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation "com.google.code.gson:gson:2.10.1"
     implementation "com.squareup.okhttp3:okhttp:4.10.0"
+    implementation "org.danilopianini:gson-extras:0.2.1"
 
     implementation project(path: ':Crossmint_UI')
 

@@ -5,30 +5,37 @@ import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 import kotlinx.parcelize.Parcelize
 
-@Parcelize
-data class NFTList(
-    val nftList: List<NFT>
-): Serializable, Parcelable
+interface NFTType {
+    val chain: Blockchain
+    val metadata: MetadataType
+}
+
+interface MetadataType {
+    val name: String?
+    val description: String?
+    val image: String
+    val collection: NFT.Collection?
+    val attributes: List<NFT.Metadata.Attribute>
+    val animationUrl: String?
+    val externalUrl: String?
+}
 
 @Parcelize
-data class NFT (
-    val chain: String,
-    val mintHash: String,
-    val metadata: Metadata,
-    val locator: String
-): Serializable, Parcelable {
+sealed class NFT: NFTType, Serializable, Parcelable {
+    class Solana(val nft: SolanaNFT) : NFT() {
+        override val chain: Blockchain
+            get() = nft.chain
+        override val metadata: MetadataType
+            get() = nft.metadata
+    }
+    class EVM(val nft: EVMNFT) : NFT() {
+        override val chain: Blockchain
+            get() = nft.chain
+        override val metadata: MetadataType
+            get() = nft.metadata
+    }
 
-    data class Metadata(
-        val name: String,
-        val symbol: String,
-        val description: String,
-        @SerializedName("seller_fee_basis_points")
-        val sellerFeeBasisPoints: Int,
-        val image: String,
-        val attributes: List<Attribute>,
-        val properties: Properties
-    ): Serializable {
-
+    data class Metadata(val x: Int): Serializable {
         data class Attribute(
             val trait_type: String,
             val value: String
@@ -51,4 +58,6 @@ data class NFT (
             ): Serializable
         }
     }
+
+    data class Collection(val name: String): Serializable
 }

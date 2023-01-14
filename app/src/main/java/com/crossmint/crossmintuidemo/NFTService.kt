@@ -1,10 +1,15 @@
 package com.crossmint.crossmintuidemo
 
 import android.net.Uri
+import com.crossmint.crossmint_ui.models.EVMNFT
 import com.crossmint.crossmint_ui.models.NFT
+import com.crossmint.crossmint_ui.models.SolanaNFT
+import com.crossmint.crossmint_ui.utils.NFTDeserializer
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import java.net.URL
 import com.google.gson.reflect.TypeToken
+import com.google.gson.typeadapters.RuntimeTypeAdapterFactory
 import okhttp3.*
 import java.io.IOException
 
@@ -33,9 +38,12 @@ class NFTService {
 
                     val json = response.body!!.string()
                     println(json)
-                    val typeToken = object : TypeToken<List<NFT>>() {}.type
-                    val nfts = Gson().fromJson<List<NFT>>(json, typeToken)
-                    callback(nfts)
+
+                    val gson = GsonBuilder().apply {
+                        registerTypeAdapter(NFT::class.java, NFTDeserializer())
+                    }.create()
+                    val nfts = gson.fromJson<Array<NFT>>(json, Array<NFT>::class.java)
+                    callback(nfts.toList())
                 }
             }
         })

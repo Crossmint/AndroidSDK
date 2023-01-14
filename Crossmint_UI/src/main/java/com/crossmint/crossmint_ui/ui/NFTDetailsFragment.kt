@@ -46,7 +46,7 @@ class NFTDetailsFragment : Fragment() {
                 placeholder(R.drawable.ic_launcher_background)
             }
             title.text = nft.metadata.name
-            brand.text = nft.chain
+            brand.text = nft.chain.toString()
             desc.text = nft.metadata.description
         }
     }
