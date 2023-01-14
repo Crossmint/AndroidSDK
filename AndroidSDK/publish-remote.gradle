@@ -44,8 +44,8 @@ afterEvaluate {
                 // Mostly self-explanatory metadata
                 pom {
                     name = PUBLISH_ARTIFACT_ID
-                    description = "The calculator Android library"
-                    url = 'https://bitbucket.org/bitbucket_username/mavenpublishlibrary/src/master/'
+                    description = "Crossmint Android SDK"
+                    url = 'https://github.com/Crossmint/AndroidSDK'
                     licenses {
                         license {
                             name = 'MIT license'
@@ -62,9 +62,9 @@ afterEvaluate {
 
                     // Version control info
                     scm {
-                        connection = 'scm:git:ssh://git@bitbucket.org/username/mavenpublishlibrary.git'
-                        developerConnection = 'scm:git:ssh://git@bitbucket.org:username/mavenpublishlibrary.git'
-                        url = 'https://bitbucket.org/username/mavenpublishlibrary/src/master/'
+                        connection = 'scm:git:ssh://git@github.com:Crossmint/AndroidSDK.git'
+                        developerConnection = 'scm:git:ssh://git@github.com:Crossmint/AndroidSDK.git'
+                        url = 'https://github.com/Crossmint/AndroidSDK'
                     }
                 }
 
